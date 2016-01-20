@@ -12,16 +12,14 @@ class TodoList
     end
 
     # Method to removre a task from the list
-    def remove_an_item(item)
-      @to_do_list.delete(item)
+    def remove_an_item(code_item_to_delete)
+      @to_do_list.delete_at(code_item_to_delete)
     end
 
     #Print out all the item
     def print_out_all_items
       @to_do_list.each do |item|
-        puts(
         item.print_details
-        )
       end
     end
 end
@@ -39,9 +37,11 @@ class Item
     end
 
     def print_details
+      puts ("-------------------------------------------------------------")
       puts @id
       puts @description
       puts @completion_status
+      puts ("-------------------------------------------------------------")
     end
 
     # methods and stuff go here
