@@ -1,0 +1,29 @@
+commit 8fdfb5568caef50ea100dc7ce10bbd8de8700a69
+Author: Cyril Leroux <cyr.leroux@outlook.com>
+Date:   Thu Jan 21 00:48:56 2016 +0100
+
+    Update status method encoding
+
+commit 890f39869b8c60af0348ca37a9786b318744cb31
+Author: Cyril Leroux <cyr.leroux@outlook.com>
+Date:   Thu Jan 21 00:37:18 2016 +0100
+
+    Table header manag.
+
+commit 3b5f6a7dca88bdd46eb1f4c7ad069339b658cb44
+Author: Cyril Leroux <cyr.leroux@outlook.com>
+Date:   Wed Jan 20 23:45:45 2016 +0100
+
+    Title update implementation
+
+commit 5df58ee2dd27b2a0f2f916a1c238a8a857c4fa3a
+Author: Cyril Leroux <cyr.leroux@outlook.com>
+Date:   Wed Jan 20 15:40:28 2016 +0100
+
+    Item deletion fixing
+
+commit 71b2434696bd819ffbe27a7fefe0222647f7037c
+Author: Cyril Leroux <cyr.leroux@outlook.com>
+Date:   Sun Jan 17 23:41:48 2016 +0100
+
+    project initialization commit
