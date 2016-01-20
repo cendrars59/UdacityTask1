@@ -16,9 +16,17 @@ class TodoList
       @to_do_list.delete_at(code_item_to_delete)
     end
 
+    def list_header(title)
+      puts ("")
+      puts ("")
+      puts ("Details of your todo list #{title}")
+      puts ("")
+      puts ("|Task Id|Task Description                                          |Completed")
+    end
+
     #Print out all the item
     def print_out_all_items
-      puts(@title)
+      list_header(@title)
       @to_do_list.each do |item|
         item.print_details
       end
@@ -38,11 +46,17 @@ class Item
     end
 
     def print_details
-      puts ("-------------------------------------------------------------")
-      puts @id
-      puts @description
-      puts @completion_status
-      puts ("-------------------------------------------------------------")
+      puts ("------------------------------------------------------------------------------")
+      puts ("|#{@id}      |#{@description}                                              |#{completion_status_management}")
+      puts ("------------------------------------------------------------------------------")
+    end
+
+    def completion_status_management
+      if @completion_status == false
+        return "[ ]"
+      else
+        return "[X]"
+      end
     end
 
     # methods and stuff go here
