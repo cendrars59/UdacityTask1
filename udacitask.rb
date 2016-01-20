@@ -4,6 +4,7 @@ require_relative 'todolist.rb'
 nb_tasks_to_create = 4
 task_id = 0
 tasks_to_delete_list = [0,1]
+tasks_for_status_update =[0]
 
 # Creates a new todo list
 my_todo_list = TodoList.new
@@ -36,6 +37,9 @@ my_todo_list.print_out_all_items
 automatic_task_deletion(tasks_to_delete_list,my_todo_list)
 
 # Update the completion status of the first item to complete
+tasks_for_status_update.each do |task|
+
+end
 
 
 # Print the list
