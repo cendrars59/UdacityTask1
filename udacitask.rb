@@ -15,7 +15,7 @@ def automatic_task_deletion(tasks_to_delete_list,my_todo_list)
   end
 end
 
-# Add four new items
+# Add the number of tasks to create
 puts("Please create #{nb_tasks_to_create} tasks")
 nb_tasks_to_create.times do
   mytask = Item.new(task_id)
@@ -27,31 +27,23 @@ end
 # Print the list
 my_todo_list.print_out_all_items
 
+# Remark : the following requirements are covered by the call
+#           of the function automatic_task_deletion
 # Delete the first item
-#my_todo_list.remove_an_item(0)
-
 # Print the list
-#my_todo_list.print_out_all_items
-
-
 # Delete the second item
-#my_todo_list.remove_an_item(1)
-
 # Print the list
-#my_todo_list.print_out_all_items
-
-
 automatic_task_deletion(tasks_to_delete_list,my_todo_list)
-
-
-puts("Putain bordel Putain bordel")
 
 # Update the completion status of the first item to complete
 
+
 # Print the list
-#my_todo_list.print_out_all_items
+my_todo_list.print_out_all_items
 
 # Update the title of the list
+puts("Update of the name of the tasks list in an automatic mode")
+my_todo_list.title = "Updated title"
 
 # Print the list
-#my_todo_list.print_out_all_items
+my_todo_list.print_out_all_items

@@ -18,6 +18,7 @@ class TodoList
 
     #Print out all the item
     def print_out_all_items
+      puts(@title)
       @to_do_list.each do |item|
         item.print_details
       end
