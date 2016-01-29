@@ -1,4 +1,5 @@
 require_relative 'todolist.rb'
+require 'colorize'
 
 # Creation of the log file (New feature)
 $log_file = File.new("report.txt", "w+")
@@ -33,19 +34,16 @@ def copy_to_log_file(file,action,options = {})
   end
 end
 
-# New feature 2 : the level of completion management
-# level of completion (End date - date now)/ (Beg date / End date)
-def level_completion_mana(beg_date, end_date)
-  return ((time.now - beg_date)/(end_date - beg_date)*100).round(2)
-end
 
-def color_selection(level_completion_mana(beg_date, end_date))
 
-end
 
-def colorized_console_message(color_selection(level_completion_mana(beg_date, end_date)),task_label)
+#def color_selection(level_completion_mana(beg_date, end_date))
 
-end
+#end
+
+#def colorized_console_message(color_selection(level_completion_mana(beg_date, end_date)),task_label)
+
+#end
 
 
 # Creates a new todo list

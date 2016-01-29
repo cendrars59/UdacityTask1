@@ -47,8 +47,9 @@ class Item
     def initialize
       @description = description
       @beg_date = Time.now
-      @end_date = (Time.now.to_s + 60 * 60 * 2)
+      @end_date = Time.now + (24*60 *60)
       @completion_status = false
+      @completion_level = level_completion_mana(@beg_date,@end_date)
     end
 
     def update_status
@@ -57,7 +58,7 @@ class Item
 
     def print_details
       puts ("------------------------------------------------------------------------------")
-      puts ("|#{@description}                                   #{@due_date}          |#{completion_status_management}")
+      puts ("|#{@description}     end date  :#{@end_date} |#{completion_status_management} | level of completion #{level_completion_mana(@beg_date,@end_date)} %")
       puts ("------------------------------------------------------------------------------")
     end
 
@@ -67,5 +68,10 @@ class Item
       else
         return "[X]"
       end
+    end
+
+    # New feature 2 : the level of completion management
+    def level_completion_mana(beg_date,end_date)
+      return ((Time.now - beg_date)/(end_date - beg_date)*100).round(2)
     end
 end
