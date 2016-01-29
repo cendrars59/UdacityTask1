@@ -4,15 +4,17 @@ require_relative 'todolist.rb'
 $log_file = File.new("report.txt", "w+")
 
 
-#initialization of parameters in order to avoid harcoded values
+#initialization of parameters in order to avoid harcoded values and allow an automatic
+#execution at the begining
 nb_tasks_to_create = 4
 tasks_to_delete_list = [0,1]
 tasks_for_status_update =[0]
 
 def automatic_task_deletion(tasks_to_delete_list,my_todo_list,log_file)
   tasks_to_delete_list.each do |task|
-      my_todo_list.remove_an_item(task)
       copy_to_log_file(log_file,"Task deletion",list:my_todo_list.to_do_list,id:task)
+      my_todo_list.remove_an_item(task)
+      ##tasks_to_delete_list.delete_at(task)
       my_todo_list.print_out_all_items
   end
 end
@@ -31,6 +33,21 @@ def copy_to_log_file(file,action,options = {})
   end
 end
 
+# New feature 2 : the level of completion management
+# level of completion (End date - date now)/ (Beg date / End date)
+def level_completion_mana(beg_date, end_date)
+  return ((time.now - beg_date)/(end_date - beg_date)*100).round(2)
+end
+
+def color_selection(level_completion_mana(beg_date, end_date))
+
+end
+
+def colorized_console_message(color_selection(level_completion_mana(beg_date, end_date)),task_label)
+
+end
+
+
 # Creates a new todo list
 my_todo_list = TodoList.new
 
@@ -46,6 +63,7 @@ my_todo_list.print_out_all_items
 
 # Remark : the following requirements are covered by the call
 #           of the function automatic_task_deletion
+
 # Delete the first item
 # Print the list
 # Delete the second item

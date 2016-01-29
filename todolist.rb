@@ -1,4 +1,5 @@
 class TodoList
+
     # methods and stuff go here
     attr_accessor :title, :to_do_list
     def initialize
@@ -23,12 +24,13 @@ class TodoList
       to_do_list.at(position).update_status
     end
 
+    # Display the to do list title
     def list_header(title)
-      puts ("")
-      puts ("")
+      2.times do
+        puts ("")
+      end
       puts ("Details of your todo list #{title}")
       puts ("")
-      puts ("|Task Description                                          |Completed")
     end
 
     #Print out all the item
@@ -44,6 +46,8 @@ class Item
     attr_accessor :description, :completion_status
     def initialize
       @description = description
+      @beg_date = Time.now
+      @end_date = (Time.now.to_s + 60 * 60 * 2)
       @completion_status = false
     end
 
@@ -53,7 +57,7 @@ class Item
 
     def print_details
       puts ("------------------------------------------------------------------------------")
-      puts ("|#{@description}                                             |#{completion_status_management}")
+      puts ("|#{@description}                                   #{@due_date}          |#{completion_status_management}")
       puts ("------------------------------------------------------------------------------")
     end
 
