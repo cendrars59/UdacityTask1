@@ -43,13 +43,16 @@ class TodoList
 end
 
 class Item
-    attr_accessor :description, :completion_status
+    attr_accessor :description, :completion_status, :beg_date, :end_date,
+    :completion_status, :owner
+
     def initialize
       @description = description
       @beg_date = Time.now
       @end_date = Time.now + (24*60 *60)
       @completion_status = false
       @completion_level = level_completion_mana(@beg_date,@end_date)
+      @owner = "Not allocated"
     end
 
     def update_status
@@ -58,7 +61,7 @@ class Item
 
     def print_details
       puts ("------------------------------------------------------------------------------")
-      puts ("|#{@description}     end date  :#{@end_date} |#{completion_status_management} | level of completion #{level_completion_mana(@beg_date,@end_date)} %")
+      puts ("|#{@description}     end date  :#{@end_date} |#{completion_status_management} | level of completion #{level_completion_mana(@beg_date,@end_date)} % | owner : #{@owner}")
       puts ("------------------------------------------------------------------------------")
     end
 

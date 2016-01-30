@@ -1,2 +1,11 @@
-Feature number 1 : Log file creation 
+Feature number 1 : Log file creation
 the purpose of this feature is to record every change into the list for reporting purpose
+
+
+Feature number 2 : Level of completion of task
+According the beginning date and the end date - > Calculate the duration of the task
+According the duration and the current date calculate the completion rate and display it
+
+
+Feature 3 : Define a task owner for each task
+if there is no owner then the task is not allocated 
