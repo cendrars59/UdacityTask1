@@ -7,5 +7,4 @@ According the beginning date and the end date - > Calculate the duration of the 
 According the duration and the current date calculate the completion rate and display it
 
 
-Feature 3 : Define a task owner for each task
-if there is no owner then the task is not allocated 
+Feature 3 : If all tasks of the to do list is completed then the list is self is completed 
