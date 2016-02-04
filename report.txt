@@ -1,7 +1,0 @@
-2016-02-04 17:08:24 +0100  : Task creation Task number 1 
-2016-02-04 17:08:24 +0100  : Task creation Task number 2 
-2016-02-04 17:08:24 +0100  : Task creation Task number 3 
-2016-02-04 17:08:24 +0100  : Task creation Task number 4 
-2016-02-04 17:08:24 +0100  : Task deletion Task number 1
-2016-02-04 17:08:24 +0100  : Task deletion Task number 3
-2016-02-04 17:08:24 +0100  : List name update
