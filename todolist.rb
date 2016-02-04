@@ -20,7 +20,7 @@ class TodoList
 
     # Method to remove a task from the list
     def remove_an_item(code_item_to_delete)
-      to_do_list.delete_at(code_item_to_delete-1)
+      to_do_list.delete_at(code_item_to_delete)
     end
 
     # Method to delete several items in once
@@ -66,6 +66,7 @@ class TodoList
       to_do_list.each do |item|
         item.print_details
       end
+      puts ("Task list completed #{to_do_list_completed?}")
     end
 
     #New feature 3 if all the tasks of the list are completed then
