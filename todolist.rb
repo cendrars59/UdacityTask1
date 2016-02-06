@@ -90,7 +90,6 @@ class Item
       @end_date = Time.now + (24*60 *60)
       @completion_status = false
       @completion_level = level_completion_mana(@beg_date,@end_date)
-      @owner = ""
     end
 
     def update_status
@@ -104,16 +103,24 @@ class Item
     end
 
     def completion_status_management
-      if @completion_status == false
-        return "[ ]"
-      else
+      if @completion_status == true
         return "[X]"
+      else
+        return "[ ]"
       end
     end
 
     # New feature 2 : the level of completion management
     def level_completion_mana(beg_date,end_date)
       return ((Time.now - beg_date)/(end_date - beg_date)*100).round(2)
+    end
+
+    def item_completed
+      if level_completion_mana(@beg_date,@end_date) == 100.00
+        return @completion_status = true
+      else
+        return @completion_status = false
+      end
     end
 
 end
