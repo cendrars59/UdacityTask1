@@ -82,7 +82,8 @@ end
 ########################### Item ########################################
 
 class Item
-    attr_accessor :description, :completion_status
+    attr_accessor :description
+    attr_reader :completion_status
     def initialize
       @description = description
       @beg_date = Time.now
